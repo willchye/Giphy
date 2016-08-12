@@ -139,11 +139,11 @@
 
 	renderButtons();
 
-	$('.animalImageClass').on('click', function(){
+	$(document.body).on('click', '.animalImageClass', function(){
 
 				var state = $(this).attr('data-state');
 				if ( state == 'still'){
-							$(this).attr('src', results[i].images.fixed_height.url);
+							$(this).attr('src', $(this).data('animate'));
 						$(this).attr('data-state', 'animate');
 				}else{
 						$(this).attr('src', $(this).data('still'));
